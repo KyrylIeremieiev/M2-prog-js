@@ -1,0 +1,12 @@
+body{
+    display: block;
+}
+
+#myBtn{
+    width: 180px;
+    height: 180px;
+}
+
+.p{
+    position: absolute;
+}

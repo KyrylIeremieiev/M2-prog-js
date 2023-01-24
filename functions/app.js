@@ -9,7 +9,7 @@ class App
         let ry = Math.random() * 500
         this.random()
         this.drawHouse(rx, ry)
-        this.drawChristmasTree(10, 10)
+        this.drawChristmasTree(0, 10)
     }
 
     random()
@@ -42,8 +42,14 @@ class App
         this.g.fillStyle="yellow"
         for (let i = 0; i < 10; i++)
         {
-            this.drawBall("yellow", x+46, y+46, 10)
+            for (let i = 0; i < 2; i++)
+            {
+                let random1=Math.floor(Math.random() * 40) - 10
+                let random2=Math.floor(Math.random() * 90) + 1
+                this.drawBall("yellow", random1+x+46, random2+y+46, 10)
+            }
         }
+        this.drawSquare("red", x+0, y+110, x+0, y+100, x+90, y+70, x+90, y+80)
         this.drawCone("blue", x+33, y+0, 0.15)
 
     }
